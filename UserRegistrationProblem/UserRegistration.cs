@@ -13,8 +13,8 @@ namespace UserRegistrationProblem
         const string LAST_NAME = "^[A-Z]{1}[a-z]{2,}$";
         const string EMAIL = "^[a-z]{3,}[.]{0,}[a-z]{0,}[@]{1}[a-z]{2,}[.]{1}[a-z]{2,}[.]{0,}[a-z]{0,}$";
         const string MOBILE_NUMBER = "^[0-9]{2}[ ]{1}[0-9]{10}$";
-        const string PASSWORD_PROTECTED = "^(?=.*[A-Z])[A-Za-z]{8,}$";
-        //const string PASSWORD_PROTECTED = "^[a-z]{8,}$";
+        const string PASSWORD_PROTECTED = "^(?=.*[0-9])(?=.*[A-Z])[A-Za-z0-9]{8,}$";
+        //const string PASSWORD_PROTECTED = "^[a-z]{8,}$"; (?=.*[A-Z])//at least one
 
         public void FirstName(string input)
         {
