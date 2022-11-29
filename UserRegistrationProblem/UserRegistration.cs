@@ -11,6 +11,7 @@ namespace UserRegistrationProblem
     {
         const string FIRST_NAME = "^[A-Z]{1}[a-z]{2,}$";
         const string LAST_NAME = "^[A-Z]{1}[a-z]{2,}$";
+        const string EMAIL = "^[a-z]{3,}[.]{0,}[a-z]{0,}[@]{1}[a-z]{2,}[.]{1}[a-z]{2,}[.]{0,}[a-z]{0,}$";
         public void FirstName(string input)
         {
             if (Regex.IsMatch(input, FIRST_NAME))
@@ -24,6 +25,13 @@ namespace UserRegistrationProblem
                 Console.WriteLine("Last Name : " + input);
             else
                 Console.WriteLine("Enter Last Name In Valid Format");
+        }
+        public void Email(string input)
+        {
+            if (Regex.IsMatch(input, EMAIL))
+                Console.WriteLine("Email : " + input);
+            else
+                Console.WriteLine("Enter Email In Valid Format");
         }
     }
 }
