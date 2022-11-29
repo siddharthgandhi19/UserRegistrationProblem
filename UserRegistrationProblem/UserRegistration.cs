@@ -13,6 +13,7 @@ namespace UserRegistrationProblem
         const string LAST_NAME = "^[A-Z]{1}[a-z]{2,}$";
         const string EMAIL = "^[a-z]{3,}[.]{0,}[a-z]{0,}[@]{1}[a-z]{2,}[.]{1}[a-z]{2,}[.]{0,}[a-z]{0,}$";
         const string MOBILE_NUMBER = "^[0-9]{2}[ ]{1}[0-9]{10}$";
+        const string PASSWORD_PROTECTED = "^[a-z]{8,}$";
         public void FirstName(string input)
         {
             if (Regex.IsMatch(input, FIRST_NAME))
@@ -40,6 +41,13 @@ namespace UserRegistrationProblem
                 Console.WriteLine("Mobile Number : " + input);
             else
                 Console.WriteLine("Enter Mobile Number In Valid Format");
+        }
+        public void Password(string input)
+        {
+            if (Regex.IsMatch(input, PASSWORD_PROTECTED))
+                Console.WriteLine("Password : " + input);
+            else
+                Console.WriteLine("Password Length Should Be Min. 8 Characters. Enter Again");
         }
     }
 }
