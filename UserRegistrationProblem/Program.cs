@@ -12,7 +12,7 @@ namespace UserRegistrationProblem
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine(" 1. First Name");
+                Console.WriteLine(" 1. First Name\n 2. LastName");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -21,6 +21,12 @@ namespace UserRegistrationProblem
                         string opt = Convert.ToString(Console.ReadLine());
                         UserRegistration firstname = new UserRegistration();
                         firstname.FirstName(opt);
+                        break;
+                    case 2:
+                        Console.WriteLine("Enter Last Name");
+                        string opt1 = Convert.ToString(Console.ReadLine());
+                        UserRegistration lastname = new UserRegistration();
+                        lastname.LastName(opt1);
                         break;
                     default:
                         flag = false;
