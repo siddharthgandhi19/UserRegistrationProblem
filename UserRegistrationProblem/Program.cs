@@ -12,7 +12,7 @@ namespace UserRegistrationProblem
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine(" 1. First Name\n 2. LastName\n 3. Email");
+                Console.WriteLine(" 1. First Name\n 2. LastName\n 3. Email\n 4. Mobile Number");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -33,6 +33,12 @@ namespace UserRegistrationProblem
                         string opt2 = Convert.ToString(Console.ReadLine());
                         UserRegistration email = new UserRegistration();
                         email.Email(opt2);
+                        break;
+                    case 4:
+                        Console.WriteLine("Enter Mobile Number");
+                        string opt3 = Convert.ToString(Console.ReadLine());
+                        UserRegistration mobile = new UserRegistration();
+                        mobile.Mobile(opt3);
                         break;
                     default:
                         flag = false;
