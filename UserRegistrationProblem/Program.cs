@@ -14,7 +14,7 @@ namespace UserRegistrationProblem
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine(" 1. First Name\n 2. LastName\n 3. Email\n 4. Mobile Number\n 5. Password\n 6. Valid Email Checker");
+                Console.WriteLine(" 1. First Name\n 2. LastName\n 3. Email\n 4. Mobile Number\n 5. Password\n 6. Valid Email Showcase\n 7.Registeration Through Lambda Method");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -51,6 +51,11 @@ namespace UserRegistrationProblem
                     case 6:
                         UserRegistration validEmail = new UserRegistration();
                         validEmail.ReadEmailsData(emailsFilePath);
+                        break;
+                    case 7:
+                        UserRegistration userRegistration = new UserRegistration();
+                        userRegistration.RegisterationThroughLambdaMethod("Sid");
+                        Console.WriteLine("Enter Below Data");
                         break;
                     default:
                         flag = false;
