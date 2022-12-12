@@ -5,6 +5,8 @@ namespace UserRegistrationProblem
 {
     class Program
     {
+        public static string emailsFilePath = @"E:\Bridgelabz\UserRegistrationProblem\UserRegistrationProblem\emailsValidList.txt";
+      
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to User Registration Problem Statements");
@@ -12,7 +14,7 @@ namespace UserRegistrationProblem
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine(" 1. First Name\n 2. LastName\n 3. Email\n 4. Mobile Number\n 5. Password");
+                Console.WriteLine(" 1. First Name\n 2. LastName\n 3. Email\n 4. Mobile Number\n 5. Password\n 6. Valid Email Checker");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -45,6 +47,10 @@ namespace UserRegistrationProblem
                         string opt4 = Convert.ToString(Console.ReadLine());
                         UserRegistration password = new UserRegistration();
                         password.Password(opt4);
+                        break;
+                    case 6:
+                        UserRegistration validEmail = new UserRegistration();
+                        validEmail.ReadEmailsData(emailsFilePath);
                         break;
                     default:
                         flag = false;
